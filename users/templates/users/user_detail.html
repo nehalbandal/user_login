@@ -1,0 +1,10 @@
+{% extends "users/base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h4 align="center">{{ object.username }}</h4>
+        <h4 align="center">{{ object.email }}</h4>
+        <h4 align="center">{{ object.fullname }}</h4>
+        <h4 align="center">{{ object.age }}</h4>
+        <h4 align="center">{{ object.address }}</h4>
+    </div>
+{% endblock %}

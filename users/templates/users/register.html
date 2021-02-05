@@ -1,0 +1,13 @@
+{% extends "users/base.html" %}
+{% block content %}
+<div class="jumbotron" align="center">
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Register">
+        <h5>Already Registered?<a href="{% url 'users:login' %}">Login</a></h5>
+    </form>
+</div>
+{% endblock %}

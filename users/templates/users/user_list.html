@@ -1,0 +1,10 @@
+{% extends "users/base.html" %}
+{% block content %}
+    <div>
+        <ul>
+            {% for usr in object_list %}
+                <li><a href="{{ usr.get_absolute_url }}">{{ usr.fullname }}</a>&nbsp;&nbsp;&nbsp;<a href="{% url 'users:delete_user' pk=usr.id %}">Delete</a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
